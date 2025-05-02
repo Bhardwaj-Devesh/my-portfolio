@@ -68,8 +68,8 @@ const Hero = () => {
             <div className="relative aspect-square max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-tr to-background rounded-full"></div>
               <img 
-                src="https://media.licdn.com/dms/image/v2/D5635AQECQI-crx6evA/profile-framedphoto-shrink_400_400/B56ZX1KFYeHoAc-/0/1743574816737?e=1746774000&v=beta&t=TwSt9-IcpwmiyPB5XKo5HGJckn3Ed46boE13qK0jX50" 
-                alt="Designer working" 
+                src="/Images/Model2.2.png" 
+                alt="Profile Picture" 
                 className="object-cover w-full h-full rounded-3xl shadow-lg animate-fade-in"
               />
             </div>
