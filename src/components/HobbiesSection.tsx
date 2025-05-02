@@ -15,7 +15,7 @@ const hobbies: HobbyProps[] = [
   {
     name: "Gyming",
     description: "Strength training and staying fit through a disciplined fitness routine.",
-    imageUrl: "public/Images/gym1.png"
+    imageUrl: "public/Images/gym1.jpg"
   },
   {
     name: "Travelling",
