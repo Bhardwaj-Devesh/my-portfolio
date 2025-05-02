@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight } from 'lucide-react';
@@ -8,7 +7,10 @@ interface ProjectCardProps {
   category: string;
   description: string;
   imageUrl: string;
-  link: string;
+  link1: string;
+  link2?: string; 
+  link1Title?: string; 
+  link2Title?: string;
   featured?: boolean;
 }
 
@@ -17,7 +19,10 @@ const ProjectCard = ({
   category,
   description,
   imageUrl,
-  link,
+  link1,
+  link2,
+  link1Title = "View Project", 
+  link2Title = "View Backend",
   featured = false
 }: ProjectCardProps) => {
   return (
@@ -37,11 +42,21 @@ const ProjectCard = ({
           <h3 className="text-xl font-bold">{title}</h3>
           <p className="text-muted-foreground">{description}</p>
         </div>
-        <Button variant="ghost" className="w-fit p-0 h-auto gap-1 text-sm" asChild>
-          <a href={link}>
-            View project <ArrowUpRight className="h-3.5 w-3.5" />
-          </a>
-        </Button>
+          <div className = "flex gap-4">
+              <Button variant="ghost" className="w-fit p-0 h-auto gap-1 text-sm" asChild>
+                <a href={link1} target="_blank" rel="noopener noreferrer">
+                  {link1Title} <ArrowUpRight className="h-3.5 w-3.5" />
+                </a>
+              </Button>
+
+              {link2 && (
+                <Button variant="ghost" className="w-fit p-0 h-auto gap-1 text-sm" asChild>
+                  <a href={link2} target="_blank" rel="noopener noreferrer">
+                    {link2Title} <ArrowUpRight className="h-3.5 w-3.5" />
+                  </a>
+                </Button>
+              )}
+          </div>
       </div>
     </div>
   );

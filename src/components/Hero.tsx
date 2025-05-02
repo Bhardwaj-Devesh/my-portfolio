@@ -2,6 +2,8 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Github, Linkedin, Youtube } from 'lucide-react';
+import RotatingText from './ui/RotatingText';
+import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -10,14 +12,19 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
           <div className="flex-1 space-y-6 animate-fade-up">
             <div className="inline-block bg-secondary rounded-full px-4 py-1.5 mb-2">
-              <span className="text-sm font-medium">Product Designer</span>
+            <span className="text-sm font-medium">Eat Right | Sleep Tight | Love Coding | Learn Always | Repeat</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              Designing experiences that <span className="text-gradient">matter</span>
+              I'm <RotatingText phrases={["Software Developer", "GenAI Developer", "Tech Journalist"]} />
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-lg">
-              I create user-centered digital products and experiences that solve real problems for businesses and users.
+              I specialize in building robust solutions with technologies like{" "}
+              <span className="text-green-600"><strong>Spring Boot</strong></span>,{" "}
+              <span className="text-blue-600"><strong>PostgreSQL</strong></span>,{" "}
+              <span className="text-purple-600"><strong>ComfyUI</strong></span>,{" "}
+              <span className="text-orange-600"><strong>LLMs</strong></span> and more.
             </p>
+          
             <div className="flex flex-wrap gap-4 pt-2">
               <Button size="lg" className="gap-2 group" asChild>
                 <a href="/resume.pdf" download>
@@ -31,34 +38,37 @@ const Hero = () => {
             </div>
             
             {/* Social Media Links */}
-            <div className="flex gap-3 pt-4">
-              <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-secondary">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <Github className="h-5 w-5" />
+            <div className="flex gap-4">
+                <a href="https://www.instagram.com/devesh_bhardwajj/" target="_blank" rel="noopener noreferrer" aria-label="HuggingFace">
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                    alt="Instagram" 
+                    className="h-6  w-6" 
+                  />
                 </a>
-              </Button>
-              <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-secondary">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <Linkedin className="h-5 w-5" />
+                <a href="https://github.com/bhardwaj-devesh" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <FaGithub className="text-black hover:text-gray-700 h-6 w-6" />
                 </a>
-              </Button>
-              <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-secondary">
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                  <Youtube className="h-5 w-5" />
+                <a href="https://www.linkedin.com/in/deveshbhardwajj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <FaLinkedin className="text-blue-600 hover:text-blue-800 h-6 w-6" />
                 </a>
-              </Button>
-              <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-secondary">
-                <a href="https://huggingface.co" target="_blank" rel="noopener noreferrer" aria-label="HuggingFace">
-                  <span className="font-bold text-lg">🤗</span>
+                <a href="https://www.youtube.com/@deveshbhardwaj3625" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                  <FaYoutube className="text-red-600 hover:text-red-800 h-6 w-6" />
                 </a>
-              </Button>
-            </div>
+                <a href="https://huggingface.co/DeveshBhardwajj" target="_blank" rel="noopener noreferrer" aria-label="HuggingFace">
+                    <img 
+                      src="https://huggingface.co/front/assets/huggingface_logo.svg"
+                      alt="Hugging Face" 
+                      className="h-6 w-6" 
+                    />
+                  </a>
+              </div>
           </div>
           <div className="flex-1 relative">
             <div className="relative aspect-square max-w-md mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-tr from-secondary to-background rounded-full animate-fade-in"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr to-background rounded-full"></div>
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
+                src="https://media.licdn.com/dms/image/v2/D5635AQECQI-crx6evA/profile-framedphoto-shrink_400_400/B56ZX1KFYeHoAc-/0/1743574816737?e=1746774000&v=beta&t=TwSt9-IcpwmiyPB5XKo5HGJckn3Ed46boE13qK0jX50" 
                 alt="Designer working" 
                 className="object-cover w-full h-full rounded-3xl shadow-lg animate-fade-in"
               />

@@ -10,11 +10,11 @@ import {
 
 const Navbar = () => {
   return (
-    <nav className="py-6 w-full z-50 bg-background/80 backdrop-blur-sm sticky top-0">
+    <nav className="py-5 w-full z-50 bg-background/80 backdrop-blur-sm sticky top-0">
       <div className="container-custom flex items-center justify-between">
         <div className="flex items-center">
           <a href="/" className="text-xl font-display font-bold tracking-tight">
-            DesignFolio
+            Devesh Bhardwaj
           </a>
         </div>
         
@@ -59,12 +59,12 @@ const NavLinks = ({ className }: NavLinksProps) => {
       <a href="#about" className="text-sm hover:text-black/70 transition-colors">
         About
       </a>
-      <a href="#community" className="text-sm hover:text-black/70 transition-colors">
-        Community
+      <a href="#project" className="text-sm hover:text-black/70 transition-colors">
+        Project
       </a>
-      <a href="#contact" className="text-sm hover:text-black/70 transition-colors">
+      {/* <a href="#contact" className="text-sm hover:text-black/70 transition-colors">
         Contact
-      </a>
+      </a> */}
     </div>
   );
 };

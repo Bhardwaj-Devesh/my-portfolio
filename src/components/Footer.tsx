@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Github, Linkedin, Youtube } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { SiHuggingface } from 'react-icons/si'; // HuggingFace logo
 
 const Footer = () => {
   return (
@@ -10,19 +10,31 @@ const Footer = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
           <div>
-            <h2 className="text-2xl font-bold mb-6">Stay in touch</h2>
+            <h2 className="text-2xl font-bold mb-6">Let’s Connect</h2>
             <p className="text-muted-foreground mb-8 max-w-md">
-              Subscribe to my newsletter to get updates on my latest work, design tips, and community events.
+              Got a project in mind, a job opportunity, a freelance gig, or just something cool to share? 
+              I’d love to hear from you. Enter your email below and I’ll get back to you soon!
             </p>
-            
-            <form className="flex gap-2 max-w-md" onSubmit={(e) => e.preventDefault()}>
+
+            <form
+              className="flex gap-2 max-w-md"
+              onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
+                e.preventDefault();
+                const form = e.currentTarget;
+                const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+                const subject = "Let's Connect!";
+                const body = `Hi Devesh,\n\nI’d like to connect with you regarding...`;
+                window.location.href = `mailto:deveshbhardwaj730@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}%0D%0A%0D%0AFrom: ${email}`;
+              }}
+            >
               <Input 
                 type="email" 
-                placeholder="Enter your email" 
+                name="email"
+                placeholder="Your email address" 
                 className="flex-1" 
                 required 
               />
-              <Button type="submit">Subscribe</Button>
+              <Button type="submit">Say Hello</Button>
             </form>
           </div>
           
@@ -31,47 +43,40 @@ const Footer = () => {
             <p className="text-muted-foreground mb-8 max-w-md">
               Let's chat about your project or just say hello! I'm always open to new opportunities and collaborations.
             </p>
-            
+
             <div className="flex gap-4">
-              <Button variant="outline" size="icon" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <Github className="h-4 w-4" />
+              <a href="https://github.com/bhardwaj-devesh" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <FaGithub className="text-black hover:text-gray-700 h-6 w-6" />
+              </a>
+              <a href="https://www.linkedin.com/in/deveshbhardwajj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <FaLinkedin className="text-blue-600 hover:text-blue-800 h-6 w-6" />
+              </a>
+              <a href="https://www.youtube.com/@deveshbhardwaj3625" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <FaYoutube className="text-red-600 hover:text-red-800 h-6 w-6" />
+              </a>
+              <a href="https://huggingface.co/DeveshBhardwajj" target="_blank" rel="noopener noreferrer" aria-label="HuggingFace">
+                  <img 
+                    src="https://huggingface.co/front/assets/huggingface_logo.svg"
+                    alt="Hugging Face" 
+                    className="h-6 w-6" 
+                  />
                 </a>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <Linkedin className="h-4 w-4" />
+                <a href="https://www.instagram.com/devesh_bhardwajj/" target="_blank" rel="noopener noreferrer" aria-label="HuggingFace">
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                    alt="Instagram" 
+                    className="h-6  w-6" 
+                  />
                 </a>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                  <Youtube className="h-4 w-4" />
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <a href="https://huggingface.co" target="_blank" rel="noopener noreferrer" aria-label="HuggingFace">
-                  <span className="font-bold text-sm">🤗</span>
-                </a>
-              </Button>
             </div>
+
           </div>
         </div>
-        
+
         <div className="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div>
-            <a href="/" className="text-xl font-display font-bold tracking-tight">
-              DesignFolio
-            </a>
-          </div>
-          
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} DesignFolio. All rights reserved.
+            © {new Date().getFullYear()} Devesh Bhardwaj. All rights reserved.
           </p>
-          
-          <div className="flex gap-6">
-            <a href="/privacy" className="text-sm hover:underline">Privacy Policy</a>
-            <a href="/terms" className="text-sm hover:underline">Terms of Service</a>
-          </div>
         </div>
       </div>
     </footer>

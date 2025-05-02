@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Book, Dumbbell, Plane } from "lucide-react";
+import { BookOpenCheck, ActivitySquare, Terminal } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -61,39 +62,65 @@ const AboutSection = () => {
           {/* Hobbies Card */}
           <Card className="shadow-md hover:shadow-lg transition-shadow">
             <CardHeader>
-              <CardTitle className="text-2xl">Hobbies</CardTitle>
+              <CardTitle className="text-2xl">Coding Profiles</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                <div className="flex items-center gap-4 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <Dumbbell className="h-5 w-5 text-primary" />
-                  </div>
+
+                {/* LeetCode */}
+                <a
+                  href="https://leetcode.com/u/Devesh_Bhardwaj/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
+                >
+                  <img
+                    src="https://logo.svgcdn.com/s/leetcode-dark.png"
+                    alt="LeetCode Logo"
+                    className="h-8 w-8 object-contain"
+                  />
                   <div>
-                    <h3 className="font-medium">Fitness</h3>
-                    <p className="text-sm text-muted-foreground">Gym training & workout</p>
+                    <h3 className="font-medium">LeetCode</h3>
+                    <p className="text-sm text-muted-foreground">Problem solving & DSA practice</p>
                   </div>
-                </div>
-                
-                <div className="flex items-center gap-4 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <Book className="h-5 w-5 text-primary" />
-                  </div>
+                </a>
+
+                {/* Codeforces */}
+                <a
+                  href="https://codeforces.com/profile/Devesh_Bhardwaj"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
+                >
+                  <img
+                    src="https://logo.svgcdn.com/s/codeforces-dark.png"
+                    alt="Codeforces Logo"
+                    className="h-8 w-8 object-contain"
+                  />
                   <div>
-                    <h3 className="font-medium">Reading</h3>
-                    <p className="text-sm text-muted-foreground">Books & articles</p>
+                    <h3 className="font-medium">Codeforces</h3>
+                    <p className="text-sm text-muted-foreground">Competitive programming</p>
                   </div>
-                </div>
-                
-                <div className="flex items-center gap-4 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <Plane className="h-5 w-5 text-primary" />
-                  </div>
+                </a>
+
+                {/* CodeChef */}
+                <a
+                  href="https://www.codechef.com/users/shivohamm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
+                >
+                  <img
+                    src="https://logo.svgcdn.com/s/codechef-dark.png"
+                    alt="CodeChef Logo"
+                    className="h-8 w-8 object-contain"
+                  />
                   <div>
-                    <h3 className="font-medium">Traveling</h3>
-                    <p className="text-sm text-muted-foreground">Exploring new places</p>
+                    <h3 className="font-medium">CodeChef</h3>
+                    <p className="text-sm text-muted-foreground">Practice & monthly contests</p>
                   </div>
-                </div>
+                </a>
+
               </div>
             </CardContent>
           </Card>
