@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Instagram, Dribbble, Twitter, Linkedin } from 'lucide-react';
+import { Github, Linkedin, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -34,27 +34,23 @@ const Footer = () => {
             
             <div className="flex gap-4">
               <Button variant="outline" size="icon" asChild>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                  <Instagram className="h-4 w-4" />
-                  <span className="sr-only">Instagram</span>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <Github className="h-4 w-4" />
                 </a>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">
-                  <Dribbble className="h-4 w-4" />
-                  <span className="sr-only">Dribbble</span>
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                  <Twitter className="h-4 w-4" />
-                  <span className="sr-only">Twitter</span>
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="h-4 w-4" />
-                  <span className="sr-only">LinkedIn</span>
+                </a>
+              </Button>
+              <Button variant="outline" size="icon" asChild>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                  <Youtube className="h-4 w-4" />
+                </a>
+              </Button>
+              <Button variant="outline" size="icon" asChild>
+                <a href="https://huggingface.co" target="_blank" rel="noopener noreferrer" aria-label="HuggingFace">
+                  <span className="font-bold text-sm">🤗</span>
                 </a>
               </Button>
             </div>

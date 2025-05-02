@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Youtube } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -19,12 +19,38 @@ const Hero = () => {
               I create user-centered digital products and experiences that solve real problems for businesses and users.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Button size="lg" className="gap-2 group">
-                View my work
-                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <Button size="lg" className="gap-2 group" asChild>
+                <a href="/resume.pdf" download>
+                  CV/Resume
+                  <ArrowDown className="h-4 w-4 group-hover:translate-y-1 transition-transform" />
+                </a>
               </Button>
               <Button size="lg" variant="outline">
                 Contact me
+              </Button>
+            </div>
+            
+            {/* Social Media Links */}
+            <div className="flex gap-3 pt-4">
+              <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-secondary">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <Github className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-secondary">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-secondary">
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                  <Youtube className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-secondary">
+                <a href="https://huggingface.co" target="_blank" rel="noopener noreferrer" aria-label="HuggingFace">
+                  <span className="font-bold text-lg">🤗</span>
+                </a>
               </Button>
             </div>
           </div>
