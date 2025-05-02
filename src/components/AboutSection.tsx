@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Book, Dumbbell, Airplane } from "lucide-react";
+import { Book, Dumbbell, Plane } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -87,7 +87,7 @@ const AboutSection = () => {
                 
                 <div className="flex items-center gap-4 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
                   <div className="bg-primary/10 p-3 rounded-full">
-                    <Airplane className="h-5 w-5 text-primary" />
+                    <Plane className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-medium">Traveling</h3>
