@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowDown, Github, Linkedin, Youtube } from 'lucide-react';
 import RotatingText from './ui/RotatingText';
 import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Hero = () => {
   return (
@@ -33,7 +34,7 @@ const Hero = () => {
                 </a>
               </Button>
               <Button size="lg" variant="outline">
-                Contact me
+                <a href='#contact'>Contact me</a>
               </Button>
             </div>
             
@@ -51,6 +52,9 @@ const Hero = () => {
                 </a>
                 <a href="https://www.linkedin.com/in/deveshbhardwajj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <FaLinkedin className="text-blue-600 hover:text-blue-800 h-6 w-6" />
+                </a>
+                <a href="https://x.com/DeveshBhardwajj" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                  <FaXTwitter className="text-black hover:text-gray-700 h-6 w-6" />
                 </a>
                 <a href="https://www.youtube.com/@deveshbhardwaj3625" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                   <FaYoutube className="text-red-600 hover:text-red-800 h-6 w-6" />

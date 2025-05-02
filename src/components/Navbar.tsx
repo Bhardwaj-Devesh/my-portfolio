@@ -21,7 +21,9 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           <NavLinks className="flex gap-8" />
-          <Button>Contact</Button>
+          <a href='#contact'>
+            <Button>Contact</Button>
+          </a>
         </div>
         
         {/* Mobile Navigation */}

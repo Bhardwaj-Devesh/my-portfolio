@@ -10,17 +10,17 @@ const hobbies: HobbyProps[] = [
   {
     name: "Reading",
     description: "Diving into books and exploring new ideas, perspectives, and worlds.",
-    imageUrl: "https://images.unsplash.com/photo-1512820790803-83ca734da794"
+    imageUrl: "public/Images/booksPhoto1.png"
   },
   {
     name: "Gyming",
     description: "Strength training and staying fit through a disciplined fitness routine.",
-    imageUrl: "https://images.unsplash.com/photo-1571019613914-85f342c1d3d9"
+    imageUrl: "public/Images/gym1.png"
   },
   {
     name: "Travelling",
     description: "Exploring different cultures, cuisines, and scenic landscapes.",
-    imageUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+    imageUrl: "public/Images/romming.png"
   }
 ];
 
