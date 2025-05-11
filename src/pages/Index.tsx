@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -7,6 +6,7 @@ import Footer from '@/components/Footer';
 import WorkExperience from '@/components/WorkExperience';
 import HobbiesSection from '@/components/HobbiesSection';
 import ProjectSection from '@/components/ProjectSection';
+import ChatbotWidget from '@/components/ChatbotWidget';
 
 const Index = () => {
   return (
@@ -20,6 +20,7 @@ const Index = () => {
         <HobbiesSection />
       </main>
       <Footer />
+      <ChatbotWidget />
     </div>
   );
 };
